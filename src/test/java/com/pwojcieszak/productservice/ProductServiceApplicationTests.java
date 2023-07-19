@@ -1,6 +1,5 @@
 package com.pwojcieszak.productservice;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pwojcieszak.productservice.dto.ProductRequest;
 import com.pwojcieszak.productservice.model.Product;
