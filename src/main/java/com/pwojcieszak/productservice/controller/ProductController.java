@@ -2,6 +2,7 @@ package com.pwojcieszak.productservice.controller;
 
 import com.pwojcieszak.productservice.dto.ProductRequest;
 import com.pwojcieszak.productservice.dto.ProductResponse;
+import com.pwojcieszak.productservice.model.Product;
 import com.pwojcieszak.productservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,5 +25,11 @@ public class ProductController {
     @ResponseStatus(HttpStatus.OK)
     public List<ProductResponse> getAllProducts(){
         return productService.getAllProducts();
+    }
+
+    @GetMapping("/{productId}")
+    @ResponseStatus(HttpStatus.OK)
+    public ProductResponse getAllProducts(@PathVariable String productId){
+        return productService.getProductById(productId);
     }
 }

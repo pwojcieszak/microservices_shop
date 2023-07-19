@@ -1,7 +1,9 @@
 package com.pwojcieszak.productservice;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pwojcieszak.productservice.dto.ProductRequest;
+import com.pwojcieszak.productservice.model.Product;
 import com.pwojcieszak.productservice.repository.ProductRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -19,7 +21,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.math.BigDecimal;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
 @Testcontainers
@@ -57,4 +59,25 @@ class ProductServiceApplicationTests {
 				.build();
 	}
 
+	@Test
+	void shouldGetProductById() throws Exception {
+		ProductRequest productRequest = getProductRequest();
+		Product savedProduct = productRepository.save(mapToProduct(productRequest));
+
+		mockMvc.perform(MockMvcRequestBuilders.get("/api/product/" + savedProduct.getId()))
+				.andExpect(status().isOk())
+				.andExpect(content().contentType(MediaType.APPLICATION_JSON))
+				.andExpect(jsonPath("$.id").value(savedProduct.getId()))
+				.andExpect(jsonPath("$.name").value(productRequest.getName()))
+				.andExpect(jsonPath("$.description").value(productRequest.getDescription()))
+				.andExpect(jsonPath("$.price").value(productRequest.getPrice().doubleValue()));
+	}
+
+	private Product mapToProduct(ProductRequest productRequest) {
+		return Product.builder()
+				.name(productRequest.getName())
+				.description(productRequest.getDescription())
+				.price(productRequest.getPrice())
+				.build();
+	}
 }
