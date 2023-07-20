@@ -2,7 +2,6 @@ package com.pwojcieszak.productservice.controller;
 
 import com.pwojcieszak.productservice.dto.ProductRequest;
 import com.pwojcieszak.productservice.dto.ProductResponse;
-import com.pwojcieszak.productservice.model.Product;
 import com.pwojcieszak.productservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
