@@ -4,19 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Refactored project as Maven Multi-Module">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/dto/InventoryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/dto/InventoryResponse.java" afterDir="false" />
+    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Now placeOrder() checks availability of product before creating an order">
+      <change afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/pwojcieszak/discoveryserver/DiscoveryServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/InventoryServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/controller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/repository/InventoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/dto/InventoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/OrderServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/config/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/config/WebClientConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/pwojcieszak/productservice/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/pwojcieszak/productservice/ProductServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +75,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Piotrek/Desktop/Git/microservices/inventory-service/src/main/java/com/pwojcieszak/Main.java",
+    "onboarding.tips.debug.path": "C:/Users/Piotrek/Desktop/Git/microservices_shop/discovery-server/src/main/java/com/pwojcieszak/Main.java",
     "spring.configuration.checksum": "7e3d94c3c4031273f13152da840b0c19",
     "vue.rearranger.settings.migration": "true"
   }
@@ -122,7 +132,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="discovery-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pwojcieszak.discoveryserver.DiscoveryServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pwojcieszak.discoveryserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="inventory-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.pwojcieszak.inventoryservice.InventoryServiceApplication" />
       <extension name="coverage">
@@ -157,8 +180,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="Spring Boot.InventoryServiceApplication" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="JUnit.ProductServiceApplicationTests" />
         <item itemvalue="JUnit.ProductServiceApplicationTests.shouldCreateProduct" />
       </list>
@@ -178,7 +202,8 @@
       <workItem from="1689956627288" duration="590000" />
       <workItem from="1689957435399" duration="377000" />
       <workItem from="1690024231916" duration="789000" />
-      <workItem from="1690218973163" duration="6534000" />
+      <workItem from="1690218973163" duration="7085000" />
+      <workItem from="1690306619573" duration="5441000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored project as Maven Multi-Module">
       <option name="closed" value="true" />
@@ -188,7 +213,55 @@
       <option name="project" value="LOCAL" />
       <updated>1689957778465</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added WebFlux dependency and WebClientConfig bean">
+      <option name="closed" value="true" />
+      <created>1690226832693</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690226832693</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added dto of Inventory Repsonse">
+      <option name="closed" value="true" />
+      <created>1690226890066</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690226890066</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Changed controller method to accept request param and return list of InventoryResponse">
+      <option name="closed" value="true" />
+      <created>1690226956993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690226956993</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Inventory service now checks returns DTO with a field informing of product's availability">
+      <option name="closed" value="true" />
+      <created>1690227089308</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690227089308</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added bean with sample data for InventoryService table">
+      <option name="closed" value="true" />
+      <created>1690227138064</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690227138064</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Now placeOrder() checks availability of product before creating an order">
+      <option name="closed" value="true" />
+      <created>1690227312114</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690227312114</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +269,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactored project as Maven Multi-Module" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored project as Maven Multi-Module" />
+    <MESSAGE value="Added WebFlux dependency and WebClientConfig bean" />
+    <MESSAGE value="Added dto of Inventory Repsonse" />
+    <MESSAGE value="Changed controller method to accept request param and return list of InventoryResponse" />
+    <MESSAGE value="Inventory service now checks returns DTO with a field informing of product's availability" />
+    <MESSAGE value="Added bean with sample data for InventoryService table" />
+    <MESSAGE value="Now placeOrder() checks availability of product before creating an order. Added TODO to make it fully synchronous and return http error" />
+    <MESSAGE value="Now placeOrder() checks availability of product before creating an order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now placeOrder() checks availability of product before creating an order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
