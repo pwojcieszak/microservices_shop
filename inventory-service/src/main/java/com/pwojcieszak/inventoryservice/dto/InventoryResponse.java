@@ -1,4 +1,4 @@
-package dto;
+package com.pwojcieszak.inventoryservice.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
