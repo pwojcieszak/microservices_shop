@@ -1,12 +1,16 @@
 package com.pwojcieszak.discoveryserver.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 @EnableWebSecurity
@@ -15,12 +19,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private String username;
     @Value("${eureka.password}")
     private String password;
-    @Override
-    public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-        authenticationManagerBuilder.inMemoryAuthentication()
-                .passwordEncoder(NoOpPasswordEncoder.getInstance())
-                .withUser(username).password(password)
-                .authorities("USER");
+    @Bean
+    public InMemoryUserDetailsManager userDetailsService() {
+        PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+        UserDetails user = User.withUsername(username)
+                .password(encoder.encode(password))
+                .roles("USER")
+                .build();
+        return new InMemoryUserDetailsManager(user);
     }
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {

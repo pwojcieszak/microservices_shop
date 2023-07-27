@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Turned on additional logging. Set up 3 routes in Api Gateway.">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pwojcieszak/apigateway/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/pwojcieszak/discoveryserver/config/SecurityConfig.java" afterDir="false" />
+    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Configured in memory user for Eureka server authentication. Added credentials in properties file, in eureka service URL line">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/java/com/pwojcieszak/discoveryserver/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/pwojcieszak/discoveryserver/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="inventory-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.pwojcieszak.inventoryservice.InventoryServiceApplication" />
       <extension name="coverage">
@@ -210,7 +202,7 @@
       <workItem from="1690218973163" duration="7085000" />
       <workItem from="1690306619573" duration="5947000" />
       <workItem from="1690390179428" duration="3543000" />
-      <workItem from="1690483724879" duration="6556000" />
+      <workItem from="1690483724879" duration="9552000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored project as Maven Multi-Module">
       <option name="closed" value="true" />
@@ -332,11 +324,46 @@
       <option name="project" value="LOCAL" />
       <updated>1690393724207</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added oauth2 authentication dependency. Added filter chain.">
+      <option name="closed" value="true" />
+      <created>1690494174601</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1690494174601</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added resource server for api-gateway and credentials in discovery-server properties">
+      <option name="closed" value="true" />
+      <created>1690494368253</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1690494368253</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Configured in memory user for Eureka server authentication. Added credentials in properties file, in eureka service URL line">
+      <option name="closed" value="true" />
+      <created>1690494646331</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1690494646331</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactored project as Maven Multi-Module" />
@@ -355,7 +382,10 @@
     <MESSAGE value="Added new module &quot;Api Gateway&quot; with dependency for Spring Cloud Gateway" />
     <MESSAGE value="Changed &quot;Product service&quot; port to random" />
     <MESSAGE value="Turned on additional logging. Set up 3 routes in Api Gateway." />
-    <option name="LAST_COMMIT_MESSAGE" value="Turned on additional logging. Set up 3 routes in Api Gateway." />
+    <MESSAGE value="Added oauth2 authentication dependency. Added filter chain." />
+    <MESSAGE value="Added resource server for api-gateway and credentials in discovery-server properties" />
+    <MESSAGE value="Configured in memory user for Eureka server authentication. Added credentials in properties file, in eureka service URL line" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configured in memory user for Eureka server authentication. Added credentials in properties file, in eureka service URL line" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
