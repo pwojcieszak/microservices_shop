@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Changed URI and WebClient to get access port from Eureka">
-      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pwojcieszak/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Turned on additional logging. Set up 3 routes in Api Gateway.">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/pwojcieszak/apigateway/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/pwojcieszak/discoveryserver/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +65,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Piotrek/Desktop/Git/microservices_shop/api-gateway/src/main/java/com/pwojcieszak/Main.java",
-    "spring.configuration.checksum": "816a5c281af1aba3ec751fdfef3ce441",
+    "spring.configuration.checksum": "12e6733c542fced65aec277c4073d301",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -172,6 +174,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.ProductServiceApplicationTests" />
+      <item itemvalue="JUnit.ProductServiceApplicationTests.shouldCreateProduct" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ProductServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+      <item itemvalue="Spring Boot.InventoryServiceApplication" />
+      <item itemvalue="Spring Boot.OrderServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.OrderServiceApplication" />
@@ -198,7 +209,8 @@
       <workItem from="1690024231916" duration="789000" />
       <workItem from="1690218973163" duration="7085000" />
       <workItem from="1690306619573" duration="5947000" />
-      <workItem from="1690390179428" duration="3031000" />
+      <workItem from="1690390179428" duration="3543000" />
+      <workItem from="1690483724879" duration="6556000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored project as Maven Multi-Module">
       <option name="closed" value="true" />
@@ -296,7 +308,31 @@
       <option name="project" value="LOCAL" />
       <updated>1690314402039</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added new module &quot;Api Gateway&quot; with dependency for Spring Cloud Gateway">
+      <option name="closed" value="true" />
+      <created>1690393625066</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1690393625066</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Changed &quot;Product service&quot; port to random">
+      <option name="closed" value="true" />
+      <created>1690393677891</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1690393677891</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Turned on additional logging. Set up 3 routes in Api Gateway.">
+      <option name="closed" value="true" />
+      <created>1690393724207</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690393724207</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +352,10 @@
     <MESSAGE value="Fixed position of package &quot;dto&quot;" />
     <MESSAGE value="Added properties needed for eureka" />
     <MESSAGE value="Changed URI and WebClient to get access port from Eureka" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed URI and WebClient to get access port from Eureka" />
+    <MESSAGE value="Added new module &quot;Api Gateway&quot; with dependency for Spring Cloud Gateway" />
+    <MESSAGE value="Changed &quot;Product service&quot; port to random" />
+    <MESSAGE value="Turned on additional logging. Set up 3 routes in Api Gateway." />
+    <option name="LAST_COMMIT_MESSAGE" value="Turned on additional logging. Set up 3 routes in Api Gateway." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
