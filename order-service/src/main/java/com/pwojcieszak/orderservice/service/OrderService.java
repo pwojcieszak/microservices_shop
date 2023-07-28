@@ -7,6 +7,8 @@ import com.pwojcieszak.orderservice.model.Order;
 import com.pwojcieszak.orderservice.model.OrderLineItems;
 import com.pwojcieszak.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cloud.sleuth.Span;
+import org.springframework.cloud.sleuth.Tracer;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -22,6 +24,7 @@ import java.util.UUID;
 public class OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClientBuilder;
+    private final Tracer tracer;
     public String placeOrder(OrderRequest orderRequest) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
@@ -37,23 +40,30 @@ public class OrderService {
                 .map(OrderLineItems::getSkuCode)
                 .toList();
 
-        Flux<InventoryResponse> inventoryResponseFlux = webClientBuilder.build().get()
-                .uri("http://inventory-service/api/inventory",
-                        uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
-                .retrieve()
-                .bodyToFlux(InventoryResponse.class);
+        Span inventoryServiceLookup = tracer.nextSpan().name("InventoryServiceLookup");
 
-        Mono<Boolean> allProductsInStockMono = inventoryResponseFlux
-                .all(InventoryResponse::isInStock);
+        try(Tracer.SpanInScope spanInScope = tracer.withSpan(inventoryServiceLookup.start())){
+            // Calling Inventory Service
+            Flux<InventoryResponse> inventoryResponseFlux = webClientBuilder.build().get()
+                    .uri("http://inventory-service/api/inventory",
+                            uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
+                    .retrieve()
+                    .bodyToFlux(InventoryResponse.class);
 
-        allProductsInStockMono.subscribe(allProductsInStock -> {
-            if (allProductsInStock) {
-                orderRepository.save(order);
-            }
-            else {
-                throw new IllegalArgumentException("Product not in stock");
-            }
-        });
+            Mono<Boolean> allProductsInStockMono = inventoryResponseFlux
+                    .all(InventoryResponse::isInStock);
+
+            allProductsInStockMono.subscribe(allProductsInStock -> {
+                if (allProductsInStock) {
+                    orderRepository.save(order);
+                }
+                else {
+                    throw new IllegalArgumentException("Product not in stock");
+                }
+            });
+        } finally {
+            inventoryServiceLookup.end();
+        }
         return "Order processing finished";
     }
 
