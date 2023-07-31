@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Added sleep to test Timeout and Retry">
+    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Provided custom tracer span">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/pwojcieszak/NotificationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/pwojcieszak/OrderPlacedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/event/OrderPlacedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/pwojcieszak/inventoryservice/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Piotrek/Desktop/Git/microservices_shop/api-gateway/src/main/java/com/pwojcieszak/Main.java&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;12e6733c542fced65aec277c4073d301&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;422544c29ce01c28fcb4c617655e047f&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -70,6 +75,9 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.pwojcieszak" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.pwojcieszak.orderservice.dto" />
     </key>
@@ -86,7 +94,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.InventoryServiceApplication">
+  <component name="RunManager" selected="Spring Boot.NotificationServiceApplication (1)">
     <configuration name="ProductServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="product-service" />
       <extension name="coverage">
@@ -151,6 +159,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificationServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pwojcieszak.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pwojcieszak.notificationservice.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.pwojcieszak.orderservice.OrderServiceApplication" />
@@ -174,6 +196,8 @@
     <list>
       <item itemvalue="JUnit.ProductServiceApplicationTests" />
       <item itemvalue="JUnit.ProductServiceApplicationTests.shouldCreateProduct" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
@@ -182,8 +206,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.InventoryServiceApplication" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
         <item itemvalue="JUnit.ProductServiceApplicationTests" />
         <item itemvalue="JUnit.ProductServiceApplicationTests.shouldCreateProduct" />
@@ -209,7 +233,9 @@
       <workItem from="1690390179428" duration="3543000" />
       <workItem from="1690483724879" duration="10628000" />
       <workItem from="1690548148142" duration="8137000" />
-      <workItem from="1690577903132" duration="3506000" />
+      <workItem from="1690577903132" duration="4244000" />
+      <workItem from="1690652663607" duration="395000" />
+      <workItem from="1690813780304" duration="5437000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored project as Maven Multi-Module">
       <option name="closed" value="true" />
@@ -395,7 +421,31 @@
       <option name="project" value="LOCAL" />
       <updated>1690558911428</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added Zipkin Distributed Tracing dependency and set up its properties">
+      <option name="closed" value="true" />
+      <created>1690582493823</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1690582493823</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Deleted unnecessary logging and delay">
+      <option name="closed" value="true" />
+      <created>1690582576114</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1690582576114</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Provided custom tracer span">
+      <option name="closed" value="true" />
+      <created>1690582753544</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1690582753544</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,8 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored project as Maven Multi-Module" />
-    <MESSAGE value="Added WebFlux dependency and WebClientConfig bean" />
     <MESSAGE value="Added dto of Inventory Repsonse" />
     <MESSAGE value="Changed controller method to accept request param and return list of InventoryResponse" />
     <MESSAGE value="Inventory service now checks returns DTO with a field informing of product's availability" />
@@ -437,7 +485,10 @@
     <MESSAGE value="Added Resilience annotations to controller. Added fallback method" />
     <MESSAGE value="Changed return type" />
     <MESSAGE value="Added sleep to test Timeout and Retry" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sleep to test Timeout and Retry" />
+    <MESSAGE value="Added Zipkin Distributed Tracing dependency and set up its properties" />
+    <MESSAGE value="Deleted unnecessary logging and delay" />
+    <MESSAGE value="Provided custom tracer span" />
+    <option name="LAST_COMMIT_MESSAGE" value="Provided custom tracer span" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
