@@ -23,7 +23,7 @@ public class ProductService {
                 .price(productRequest.getPrice())
                 .build();
         productRepository.save(product);
-        log.info("Product {} is saved", product.getId());
+        log.info("Product {} with name {} is saved", product.getId(), product.getName());
     }
 
     public List<ProductResponse> getAllProducts() {
