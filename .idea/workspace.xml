@@ -4,20 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Provided custom tracer span">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/pwojcieszak/NotificationServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/pwojcieszak/OrderPlacedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/event/OrderPlacedEvent.java" afterDir="false" />
+    <list default="true" id="d09db986-249c-4387-bb2c-fc578d94bf7b" name="Changes" comment="Included more information about created product">
+      <change afterPath="$PROJECT_DIR$/prometheus/prometheus.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/pwojcieszak/orderservice/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +32,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dockerizingApplication" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -59,6 +64,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-20&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Piotrek/Desktop/Git/microservices&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -67,7 +73,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Piotrek/Desktop/Git/microservices_shop/api-gateway/src/main/java/com/pwojcieszak/Main.java&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;422544c29ce01c28fcb4c617655e047f&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;98c17c4b26ab75412fb17629ec9ed259&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -78,6 +85,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.pwojcieszak" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Piotrek\Desktop\Git\microservices_shop\realms" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.pwojcieszak.orderservice.dto" />
     </key>
@@ -85,6 +95,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install" />
+      <command value="mvn clean compile jib:build" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -122,6 +133,19 @@
       <option name="MAIN_CLASS_NAME" value="com.pwojcieszak.productservice.ProductServiceApplicationTests" />
       <option name="METHOD_NAME" value="shouldCreateProduct" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="microservices_shop" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="microservices_shop" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,24 +217,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JUnit.ProductServiceApplicationTests" />
       <item itemvalue="JUnit.ProductServiceApplicationTests.shouldCreateProduct" />
       <item itemvalue="Spring Boot.NotificationServiceApplication" />
-      <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication (1)" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="Spring Boot.DiscoveryServerApplication" />
-        <item itemvalue="JUnit.ProductServiceApplicationTests" />
         <item itemvalue="JUnit.ProductServiceApplicationTests.shouldCreateProduct" />
+        <item itemvalue="JUnit.ProductServiceApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +265,11 @@
       <workItem from="1690548148142" duration="8137000" />
       <workItem from="1690577903132" duration="4244000" />
       <workItem from="1690652663607" duration="395000" />
-      <workItem from="1690813780304" duration="5437000" />
+      <workItem from="1690813780304" duration="5924000" />
+      <workItem from="1690838861111" duration="2621000" />
+      <workItem from="1690890737138" duration="3343000" />
+      <workItem from="1690908134778" duration="14973000" />
+      <workItem from="1690993048482" duration="8138000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored project as Maven Multi-Module">
       <option name="closed" value="true" />
@@ -445,7 +479,127 @@
       <option name="project" value="LOCAL" />
       <updated>1690582753544</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added new module &quot;Notification-Service&quot; and dependencies for Kafka">
+      <option name="closed" value="true" />
+      <created>1690819830514</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1690819830514</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Set up a docker-compose file for initializing Kafka">
+      <option name="closed" value="true" />
+      <created>1690819855141</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1690819855141</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Added Kafka properties">
+      <option name="closed" value="true" />
+      <created>1690819885638</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1690819885638</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added Kafka notification">
+      <option name="closed" value="true" />
+      <created>1690819946052</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1690819946052</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Created wrapper class for Kafka notification data">
+      <option name="closed" value="true" />
+      <created>1690820108685</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1690820108685</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Added Kafka annotation to handle topic of &quot;notificationTopic&quot;">
+      <option name="closed" value="true" />
+      <created>1690820158115</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1690820158115</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Moved some dependencies. Added JIB plugin to parent. Added postgresql to order- and inventory-service">
+      <option name="closed" value="true" />
+      <created>1690924538390</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1690924538390</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added exported realm information from keycloak service">
+      <option name="closed" value="true" />
+      <created>1690924602170</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1690924602170</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Added profile &quot;docker&quot; with properties needed to work in container mode">
+      <option name="closed" value="true" />
+      <created>1690924682167</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1690924682167</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Corrected a typo">
+      <option name="closed" value="true" />
+      <created>1690924701988</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1690924701988</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Created docker-compose to containerize all current services">
+      <option name="closed" value="true" />
+      <created>1690924756941</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1690924756941</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added queries for proper functioning in containers">
+      <option name="closed" value="true" />
+      <created>1690924841188</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1690924841188</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Added missed necessary properties for mongo to work in container">
+      <option name="closed" value="true" />
+      <created>1690931144489</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1690931144489</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Changed keycloak image version">
+      <option name="closed" value="true" />
+      <created>1690931170864</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1690931170864</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Included more information about created product">
+      <option name="closed" value="true" />
+      <created>1690931204917</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1690931204917</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,21 +617,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added dto of Inventory Repsonse" />
-    <MESSAGE value="Changed controller method to accept request param and return list of InventoryResponse" />
-    <MESSAGE value="Inventory service now checks returns DTO with a field informing of product's availability" />
-    <MESSAGE value="Added bean with sample data for InventoryService table" />
-    <MESSAGE value="Now placeOrder() checks availability of product before creating an order. Added TODO to make it fully synchronous and return http error" />
-    <MESSAGE value="Now placeOrder() checks availability of product before creating an order" />
-    <MESSAGE value="Added Eureka Service Discovery dependencies and annotations" />
-    <MESSAGE value="Added new module &quot;Discovery-Service&quot;" />
-    <MESSAGE value="Fixed position of package &quot;dto&quot;" />
-    <MESSAGE value="Added properties needed for eureka" />
-    <MESSAGE value="Changed URI and WebClient to get access port from Eureka" />
-    <MESSAGE value="Added new module &quot;Api Gateway&quot; with dependency for Spring Cloud Gateway" />
-    <MESSAGE value="Changed &quot;Product service&quot; port to random" />
-    <MESSAGE value="Turned on additional logging. Set up 3 routes in Api Gateway." />
-    <MESSAGE value="Added oauth2 authentication dependency. Added filter chain." />
     <MESSAGE value="Added resource server for api-gateway and credentials in discovery-server properties" />
     <MESSAGE value="Configured in memory user for Eureka server authentication. Added credentials in properties file, in eureka service URL line" />
     <MESSAGE value="Implemented bcrypt encoder" />
@@ -488,7 +627,22 @@
     <MESSAGE value="Added Zipkin Distributed Tracing dependency and set up its properties" />
     <MESSAGE value="Deleted unnecessary logging and delay" />
     <MESSAGE value="Provided custom tracer span" />
-    <option name="LAST_COMMIT_MESSAGE" value="Provided custom tracer span" />
+    <MESSAGE value="Added new module &quot;Notification-Service&quot; and dependencies for Kafka" />
+    <MESSAGE value="Set up a docker-compose file for initializing Kafka" />
+    <MESSAGE value="Added Kafka properties" />
+    <MESSAGE value="Added Kafka notification" />
+    <MESSAGE value="Created wrapper class for Kafka notification data" />
+    <MESSAGE value="Added Kafka annotation to handle topic of &quot;notificationTopic&quot;" />
+    <MESSAGE value="Moved some dependencies. Added JIB plugin to parent. Added postgresql to order- and inventory-service" />
+    <MESSAGE value="Added exported realm information from keycloak service" />
+    <MESSAGE value="Added profile &quot;docker&quot; with properties needed to work in container mode" />
+    <MESSAGE value="Corrected a typo" />
+    <MESSAGE value="Created docker-compose to containerize all current services" />
+    <MESSAGE value="Added queries for proper functioning in containers" />
+    <MESSAGE value="Added missed necessary properties for mongo to work in container" />
+    <MESSAGE value="Changed keycloak image version" />
+    <MESSAGE value="Included more information about created product" />
+    <option name="LAST_COMMIT_MESSAGE" value="Included more information about created product" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
