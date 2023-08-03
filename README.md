@@ -23,3 +23,6 @@ Attempt to place an order on `http://localhost:8181/api/order` using POST.
 
 # Using Grafana
 Grafana is available on `http://localhost:3000`.
+
+# Additional info
+Project is heavily inspired by <a href="https://www.youtube.com/playlist?list=PLSVW22jAG8pBnhAdq9S8BpLnZ0_jVBj0c">this</a> course.
